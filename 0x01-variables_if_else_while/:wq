@@ -4,9 +4,9 @@
  * Return: 0
  */
 int main(void)
-{
+{	
 	char cd;
-
+	
 
 	for (cd = 'a'; cd <= 'z'; cd++)
 		putchar(cd);
