@@ -5,28 +5,21 @@
  */
 int main(void)
 {
-	int x = '0';
-	int y = '0';
+	int x, y;
 
-	while (x <= '9')
+	for (x = 0; x < 9; x++)
 	{
-		y = 0;
-		while (y <= '9')
+		for (y = x + 1; y < 10; y++)
 		{
-			if (x != y && x < y)
-			{
-				putchar(x + 48);
-				putchar(y + 48);
+			putchar((x % 10) + '0');
+			putchar((y % 10) + '0');
 
-				if (x == '8' && y == '9')
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			if (x == 8 && y == 9)
+			{
+				putchar(',');
+				putchar(' ');
 			}
-			y++;
 		}
-		x++;
 	}
 	putchar('\n');
 	return (0);
