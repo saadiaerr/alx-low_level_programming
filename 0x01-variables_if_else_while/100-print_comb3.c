@@ -15,10 +15,10 @@ int main(void)
 			putchar((y % 10) + '0');
 
 			if (x == 8 && y == 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
