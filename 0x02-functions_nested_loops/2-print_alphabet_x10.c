@@ -4,7 +4,8 @@
   */
 void print_alphabet_x10(void)
 {
-	int li, cd;
+	int li;
+	char cd;
 
 	for (li = '0'; li <= 9; li++)
 	{
