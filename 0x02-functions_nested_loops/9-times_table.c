@@ -22,7 +22,6 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 				_putchar(prd + '0');
 			}
 			else if (prd >= 10)
