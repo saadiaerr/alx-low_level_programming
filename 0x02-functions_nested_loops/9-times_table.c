@@ -21,14 +21,19 @@ void times_table(void)
 				_putchar((prd % 10) + '0');
 			}
 
-			if (mult != 0)
+			if (mult != 0 && prd < 10)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(prd + '0');
 			}
+
 			else
+				(mult == 0)
+			{
 			_putchar(prd + '0');
+			}
 		}
 		_putchar('\n');
 	}
