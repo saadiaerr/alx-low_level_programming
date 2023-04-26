@@ -29,8 +29,7 @@ void times_table(void)
 				_putchar(prd + '0');
 			}
 
-			else
-				(mult == 0)
+			else if (mult == 0)
 			{
 			_putchar(prd + '0');
 			}
