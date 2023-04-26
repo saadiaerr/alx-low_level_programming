@@ -1,5 +1,4 @@
 # include "main.h"
-# include <stdio.h>
 /**
   * print_to_98 - function that prints all natural numbers from n to 98
   * @n: inmput number to check
@@ -7,35 +6,17 @@
   */
 void print_to_98(int n)
 {
-	if (n <= 98)
+	int m;
+
+	if (n > 98)
 	{
-		for (; n <= 98; n++)
-		{
-			if (n == 98)
-			{
-				printf("%d", n)'
-				printf("\n");
-				break;
-			}
-			else
-			{
-				printf("%d", n);
-			}
-		}
+		for (m = n; m > 98; m--)
+			printf("%d, ", m);
 	}
 	else
 	{
-		for (; n >= 98; n--)
+		for (m = n; m < 98; m++)
+			printf("%d, ", m);
 	}
-	if (n == 98)
-	{
-		printf("%d", n);
-		printf("\n");
-		break;
-	}
-	else
-	{
-		printf("%d", n);
-	}
-	return (0);
+	printf("98\n");
 }
