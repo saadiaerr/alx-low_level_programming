@@ -17,7 +17,7 @@ void print_times_table(int n)
 
 				if (pr == 0)
 				{
-					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar(pr + '0');
 				} else if (pr < 10 && mult != 0)
