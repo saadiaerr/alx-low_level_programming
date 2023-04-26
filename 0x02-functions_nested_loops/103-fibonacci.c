@@ -5,18 +5,17 @@
   */
 int main(void)
 {
-	int i;
-	unsigned long grp1 = 1, grp2 = 2, sum = 0, next;
+	int i = 0;
+	unsigned long grp1 = 1, grp2 = 2, sum = k;
 
-	for (i = 1; i <= 33; i++)
+	while (k + grp1 < 4000000)
 	{
-		if (grp1 < 4000000 && (grp1 % 2) == 0)
-		{
-			sum = sum + grp1;
-		}
-		next = grp1 + grp2;
-		grp1 = grp2;
+		if (grp1 + k < 4000000)
+
+			sum += k;
+		j = k - j;
+		i++;
 	}
-	printf("%lu\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
