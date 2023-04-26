@@ -6,11 +6,13 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long grp1 = 1, grp2 = 2, sum = k;
+	unsigned long j = 1, k = 2, sum = 0;
 
-	while (k + grp1 < 4000000)
+	while (k + j < 4000000)
 	{
-		if (grp1 + k < 4000000)
+		k += j;
+
+		if (k % 2 == 0)
 
 			sum += k;
 		j = k - j;
