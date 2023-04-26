@@ -12,6 +12,6 @@ int _abs(int Nu)
 	}
 	else
 	{
-		return (Nu x - 1);
+		return (Nu * - 1);
 	}
 }
