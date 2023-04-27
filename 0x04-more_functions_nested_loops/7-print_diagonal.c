@@ -5,12 +5,13 @@
   */
 void print_diagonal(int n)
 {
+	int m;
+	int y;
+
 	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		int m, y;
-
 		for (m = 1; m <= n; m++)
 		{
 			for (y = 1; y <= m; y++)
