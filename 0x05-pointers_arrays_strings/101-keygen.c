@@ -11,9 +11,9 @@ int main(void)
 	int desiredNumber;
 	char alph;
 
-	srand(time(NULL));
+	srand(time(0));
 
-	while (desiredNumber <= 5678)
+	while (desiredNumber <= 2645)
 	{
 		alph = rand() % 128;
 		desiredNumber += alph;
