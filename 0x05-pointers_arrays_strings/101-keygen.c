@@ -15,7 +15,7 @@ int main(void)
 
 	while (desiredNumber <= 5678)
 	{
-		alph = rand() % 126;
+		alph = rand() % 128;
 		desiredNumber += alph;
 		putchar(alph);
 	}
