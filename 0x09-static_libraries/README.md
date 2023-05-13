@@ -1,0 +1,1 @@
+lah inajhna ya rabi 
