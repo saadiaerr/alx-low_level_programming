@@ -37,11 +37,9 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	m = cnt_word(str);
 	if (m == 1)
 		return (NULL);
-
 	c = (char **) malloc(m * sizeof(char *));
 	if (c == NULL)
 		return (NULL);
@@ -49,13 +47,12 @@ char **strtow(char *str)
 	y = 0;
 	while (str[y])
 	{
-		if (str[y] != ' ' && (y = 0 || str[y - 1] == ' '))
+		if (str[y] != ' ' && (y == 0 || str[y - 1] == ' '))
 		{
 			for (z = 1; str[y + z] != ' ' && str[y + z]; z++)
 			z++;
 			c[w] = (char *)malloc(z * sizeof(char));
 			z--;
-
 			if (c[w] == NULL)
 			{
 				for (s = 0; s < w; s++)
@@ -66,7 +63,6 @@ char **strtow(char *str)
 			}
 			for (t = 0; t < z; t++)
 				c[w][t] = str[y + t];
-
 			c[w][t] = '\0';
 			w++;
 			y += z;
