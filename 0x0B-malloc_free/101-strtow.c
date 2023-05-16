@@ -50,6 +50,7 @@ char **strtow(char *str)
 		if (str[y] != ' ' && (y == 0 || str[y - 1] == ' '))
 		{
 			for (z = 1; str[y + z] != ' ' && str[y + z]; z++)
+				;
 			z++;
 			c[w] = (char *)malloc(z * sizeof(char));
 			z--;
