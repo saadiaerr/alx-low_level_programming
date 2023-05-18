@@ -9,8 +9,9 @@ void *malloc_checked(unsigned int b);
 void *_calloc(unsigned int nmemb, unsigned int size);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 int *array_range(int min, int max);
-int _atoi(const char *s);
-void _puts(char *str);
-void print_int(unsigned long int n);
+int _digit(char *strings);
+int _str(char *c);
+int main(int argc, char *argv[]);
+void errors(void);
 
 #endif
