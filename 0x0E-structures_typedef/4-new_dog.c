@@ -1,41 +1,54 @@
 #include <stdlib.h>
 #include "dog.h"
+
 /**
- * _slen - size of strings
- * @c: string to check
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
  * Return: the length of the string
  */
-int _slen(char *c)
+int _strlen(char *s)
 {
-	int len;
+	int i;
+
+	i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	return (i);
+}
+
+/**
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
+ *
+ * Return: the pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
 
 	len = 0;
 
-	while (*c++)
+	while (src[len] != '\0')
 	{
 		len++;
 	}
 
-	return (len);
-}
-
-/**
- * *_strcpy - copies the string
- * @dest: the buffer in which we copy the string
- * @src: string to be copy
- * Return: dest
- */
-char *_strcpy(char *dest, char *src)
-{
-	int y = 0;
-
-	for (; src[y]; y++)
+	for (i = 0; i < len; i++)
 	{
-		dest[y] = src[y];
+		dest[i] = src[i];
 	}
-	dest[y] = '\0';
+	dest[i] = '\0';
 
 	return (dest);
+}
 
 /**
  * new_dog - creates a new dog
@@ -48,23 +61,22 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int int1, int2;
+	int len1, len2;
 
-	int1 = _slen(name);
-	int2 = _slen(owner);
+	len1 = _strlen(name);
+	len2 = _strlen(owner);
 
 	dog = malloc(sizeof(dog_t));
-	if (!dog)
+	if (dog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * (int1 + 1));
+	dog->name = malloc(sizeof(char) * (len1 + 1));
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-
-	dog->owner = malloc(sizeof(char) * (int2 + 1));
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
 	if (dog->owner == NULL)
 	{
 		free(dog);
@@ -77,3 +89,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (dog);
 }
+
